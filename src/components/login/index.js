@@ -12,9 +12,9 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import jwtDecode from "jwt-decode";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useDispatch, useSelector } from "react-redux";
-import { thisUser, logginUser } from "../../redux/features/auth/loginSlice";
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logginUser } from "../../redux/features/auth/loginSlice";
+// import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -30,11 +30,11 @@ const theme = createTheme();
 
 export default function SignIn() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const authenticated = useSelector(thisUser);
-  if (authenticated.user) {
-    navigate("/dashboard");
-  }
+  // const navigate = useNavigate();
+  // const authenticated = useSelector(thisUser);
+  // if (authenticated.user) {
+  //   navigate("/dashboard");
+  // }
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
