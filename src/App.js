@@ -25,7 +25,7 @@ function App() {
         <Route path="dashboard" element={<DashboardLayout />}>
           <Route path="app" element={<DashboardApp />} />
           <Route path="users" element={<User />} />
-          <Route path="/Products" element={<Products />} />
+          <Route path="products" element={<Products />} />
           <Route path="blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
         </Route>
